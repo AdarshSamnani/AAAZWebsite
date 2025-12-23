@@ -1,116 +1,179 @@
-/* Catalog Page */
-.catalog-section {
-    padding: 60px 0;
-    min-height: calc(100vh - 200px);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Catalog - AAAZ Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">🌐</div>
+                    <span class="logo-text">AAAZ Logistics</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html" class="active">Catalog</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="contact.html" class="btn-contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-.catalog-controls {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 40px;
-}
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <!-- Search and Filter -->
+            <div class="catalog-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="Search materials..." class="search-input">
+                </div>
+                <div class="filter-box">
+                    <select class="filter-select">
+                        <option>All Categories</option>
+                        <option>Plastics</option>
+                        <option>Metals</option>
+                    </select>
+                </div>
+            </div>
 
-.search-box {
-    flex: 1;
-}
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1621905252472-a0c6b814e9e9?w=600" alt="HDPE Grade A Pellet" class="product-image">
+                        <span class="product-badge">PLASTIC</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">HDPE Grade A (80% Pellet 20% Powder)</h3>
+                        <p class="product-origin">Origin: USA</p>
+                        <p class="product-description">
+                            HDPE Grade A 80% Pellet 20% Powder. Pipe low pressure, use small % with prime material to make thick film, decks, and docks for outdoor.
+                        </p>
+                        <div class="product-specs">
+                            <h4>SPECS</h4>
+                            <p>MFI: Frac - 1.5, Moisture 2-3%, Bulk Load</p>
+                        </div>
+                        <button class="btn btn-block btn-dark">Request Quote</button>
+                    </div>
+                </div>
 
-.search-input {
-    width: 100%;
-    padding: 14px 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 16px;
-}
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1621905252472-a0c6b814e9e9?w=600" alt="LLDPE Grade A Pellet" class="product-image">
+                        <span class="product-badge">PLASTIC</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">LLDPE Grade A Pellet</h3>
+                        <p class="product-origin">Origin: USA</p>
+                        <p class="product-description">
+                            Plant Scrap LLDPE Grade A Pellets used for film for packaging, trash bags, liner, etc... Bulk Loading
+                        </p>
+                        <div class="product-specs">
+                            <h4>SPECS</h4>
+                            <p>MFI: 1-3, Moisture: 2-3%, Powder: 2-3%</p>
+                        </div>
+                        <button class="btn btn-block btn-dark">Request Quote</button>
+                    </div>
+                </div>
 
-.filter-select {
-    padding: 14px 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 16px;
-    min-width: 200px;
-    background: white;
-}
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1621905252472-a0c6b814e9e9?w=600" alt="PP Grade A Pellet" class="product-image">
+                        <span class="product-badge">PLASTIC</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">PP Grade A Pellet</h3>
+                        <p class="product-origin">Origin: USA</p>
+                        <p class="product-description">
+                            Polypropylene Grade A pellets for injection molding and extrusion applications.
+                        </p>
+                        <div class="product-specs">
+                            <h4>SPECS</h4>
+                            <p>MFI: 2-4, Moisture: 1-2%, Bulk Load</p>
+                        </div>
+                        <button class="btn btn-block btn-dark">Request Quote</button>
+                    </div>
+                </div>
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-}
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1621905252472-a0c6b814e9e9?w=600" alt="PET Flakes" class="product-image">
+                        <span class="product-badge">PLASTIC</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">PET Flakes Grade A</h3>
+                        <p class="product-origin">Origin: USA</p>
+                        <p class="product-description">
+                            Clear PET flakes from bottle recycling, suitable for fiber and sheet production.
+                        </p>
+                        <div class="product-specs">
+                            <h4>SPECS</h4>
+                            <p>IV: 0.75-0.80, Moisture: <1%, Color: Clear</p>
+                        </div>
+                        <button class="btn btn-block btn-dark">Request Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.product-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-}
-
-.product-image-wrapper {
-    position: relative;
-    height: 250px;
-}
-
-.product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.product-badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: #2563eb;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.product-info {
-    padding: 24px;
-}
-
-.product-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #1e293b;
-}
-
-.product-origin {
-    color: #64748b;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-.product-description {
-    color: #475569;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-}
-
-.product-specs {
-    background: #f8f9fa;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-}
-
-.product-specs h4 {
-    font-size: 12px;
-    font-weight: 700;
-    color: #64748b;
-    margin-bottom: 6px;
-}
-
-.product-specs p {
-    font-size: 13px;
-    color: #475569;
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🌐</div>
+                        <span class="logo-text">AAAZ Logistics</span>
+                    </div>
+                    <p class="footer-description">
+                        Global export partner for premium raw materials. Specializing in scrap metals and industrial plastics for sustainable manufacturing.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Material Catalog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="admin.html">Partner Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Materials</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Scrap Metals</a></li>
+                        <li><a href="catalog.html">Industrial Plastics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Texas, USA</li>
+                        <li>📞 979-739-7822</li>
+                        <li>✉️ zulfikar@aaazlogistics.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">𝕏</a>
+                        <a href="#" class="social-link">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AAAZ Logistics LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
