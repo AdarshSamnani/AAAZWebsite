@@ -1,133 +1,167 @@
-/* Contact Page */
-.contact-section {
-    padding: 60px 0;
-    min-height: calc(100vh - 200px);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AAAZ Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">🌐</div>
+                    <span class="logo-text">AAAZ Logistics</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="contact.html" class="btn-contact active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-}
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h1 class="contact-heading">Get in Touch</h1>
+                    <p class="contact-subheading">
+                        Interested in buying our materials or selling your scrap? Our team is ready to assist you with logistics, pricing, and material specifications.
+                    </p>
 
-.contact-heading {
-    font-size: 40px;
-    font-weight: 800;
-    color: #1e293b;
-    margin-bottom: 16px;
-}
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h3 class="contact-method-title">Email Us</h3>
+                                <p class="contact-method-desc">For general inquiries and quotes</p>
+                                <a href="mailto:zulfikar@aaazlogistics.com" class="contact-link">zulfikar@aaazlogistics.com</a>
+                            </div>
+                        </div>
 
-.contact-subheading {
-    color: #64748b;
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h3 class="contact-method-title">WhatsApp / Call</h3>
+                                <p class="contact-method-desc">Available on WhatsApp</p>
+                                <a href="tel:979-739-7822" class="contact-link">979-739-7822</a>
+                            </div>
+                        </div>
 
-.contact-methods {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3 class="contact-method-title">Location</h3>
+                                <p class="contact-method-desc">Operations</p>
+                                <p class="contact-link-plain">Texas, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-.contact-method {
-    display: flex;
-    gap: 20px;
-}
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-card">
+                        <h2 class="form-heading">Send us a Message</h2>
+                        <p class="form-subheading">Fill out the form below and we'll get back to you shortly.</p>
 
-.contact-icon {
-    width: 56px;
-    height: 56px;
-    background: #eff6ff;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    flex-shrink: 0;
-}
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-input" placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-input" placeholder="john@company.com">
+                                </div>
+                            </div>
 
-.contact-method-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 4px;
-}
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <select class="form-input">
+                                    <option>Select a topic</option>
+                                    <option>Material Inquiry</option>
+                                    <option>Quote Request</option>
+                                    <option>Partnership Opportunity</option>
+                                    <option>General Question</option>
+                                </select>
+                            </div>
 
-.contact-method-desc {
-    color: #64748b;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-textarea" rows="5" placeholder="Tell us about your requirements..."></textarea>
+                            </div>
 
-.contact-link {
-    color: #2563eb;
-    font-weight: 600;
-}
+                            <div class="form-group">
+                                <label class="form-label">Human Verification: What is 1 + 5?</label>
+                                <input type="text" class="form-input" placeholder="Enter the sum">
+                            </div>
 
-.contact-link-plain {
-    color: #475569;
-}
+                            <button type="submit" class="btn btn-primary btn-block">
+                                ✉️ Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.form-card {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.form-heading {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 8px;
-}
-
-.form-subheading {
-    color: #64748b;
-    margin-bottom: 32px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #334155;
-    margin-bottom: 8px;
-}
-
-.form-input,
-.form-textarea {
-    padding: 12px 16px;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    font-size: 15px;
-    font-family: inherit;
-    transition: border-color 0.3s;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-}
-
-.form-textarea {
-    resize: vertical;
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🌐</div>
+                        <span class="logo-text">AAAZ Logistics</span>
+                    </div>
+                    <p class="footer-description">
+                        Global export partner for premium raw materials. Specializing in scrap metals and industrial plastics for sustainable manufacturing.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Material Catalog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="admin.html">Partner Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Materials</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Scrap Metals</a></li>
+                        <li><a href="catalog.html">Industrial Plastics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Texas, USA</li>
+                        <li>📞 979-739-7822</li>
+                        <li>✉️ zulfikar@aaazlogistics.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">𝕏</a>
+                        <a href="#" class="social-link">in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AAAZ Logistics LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
