@@ -1,89 +1,411 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AAAZ Logistics</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<header class="navbar">
-  <div class="container nav-content">
-    <div class="logo">🌐 AAAZ Logistics</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="catalog.html">Catalog</a>
-      <a href="admin.html">Admin</a>
-      <a href="contact.html" class="btn">Contact</a>
-    </nav>
-  </div>
-</header>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
 
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Premium Raw Material <span>Logistics</span></h1>
-    <p>
-      Connecting global markets with high-quality scrap metals and recycled
-      plastics. AAAZ Logistics is your trusted export partner.
-    </p>
-    <div class="hero-buttons">
-      <a href="catalog.html" class="btn primary">View Catalog</a>
-      <a href="contact.html" class="btn secondary">Contact Us</a>
-    </div>
-  </div>
-</section>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-<section class="features container">
-  <div class="feature">
-    <h3>♻ Sustainable Sourcing</h3>
-    <p>Responsibly sourced scrap metals and plastics supporting the circular economy.</p>
-  </div>
-  <div class="feature">
-    <h3>🌍 Global Export</h3>
-    <p>Reliable logistics ensuring secure delivery to ports worldwide.</p>
-  </div>
-  <div class="feature">
-    <h3>📊 Market Competitive</h3>
-    <p>Transparent pricing and consistent quality grading.</p>
-  </div>
-</section>
+ul {
+    list-style: none;
+}
 
-<section class="materials container">
-  <div class="materials-header">
-    <h2>Our Core Materials</h2>
-    <a href="catalog.html">View All Materials →</a>
-  </div>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-  <div class="material-grid">
-    <div class="material-card">
-      <img src="images/metals.jpg" alt="Scrap Metals">
-      <div class="material-overlay">
-        <h3>Scrap Metals</h3>
-        <p>Copper, Aluminum, Steel, Iron</p>
-      </div>
-    </div>
+/* Navigation */
+.navbar {
+    background-color: #e8ecef;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-    <div class="material-card">
-      <img src="images/plastics.jpg" alt="Plastics">
-      <div class="material-overlay">
-        <h3>Plastics</h3>
-        <p>All industrial & recycled plastics</p>
-      </div>
-    </div>
-  </div>
-</section>
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-<section class="cta">
-  <h2>Ready to Partner With Us?</h2>
-  <p>Competitive rates and reliable global export services.</p>
-  <a href="contact.html" class="btn primary">Get in Touch</a>
-</section>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+}
 
-<footer class="footer">
-  <p>© 2025 AAAZ Logistics LLC. All rights reserved.</p>
-</footer>
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #2563eb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
 
-</body>
-</html>
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #475569;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2563eb;
+}
+
+.btn-contact {
+    background: #2d4a9e;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn-contact:hover {
+    background: #1e3a8a;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-highlight {
+    color: #60a5fa;
+}
+
+.hero-description {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1e293b;
+}
+
+.btn-secondary:hover {
+    background: #f1f5f9;
+}
+
+.btn-white {
+    background: white;
+    color: #2d4a9e;
+}
+
+.btn-white:hover {
+    background: #f8fafc;
+}
+
+.btn-dark {
+    background: #1e293b;
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #0f172a;
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 48px;
+    width: 80px;
+    height: 80px;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.feature-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.feature-description {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* Materials Section */
+.materials {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.materials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    color: #64748b;
+    font-size: 18px;
+}
+
+.link-view-all {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.material-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    cursor: pointer;
+}
+
+.material-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.material-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 40px 30px;
+    color: white;
+}
+
+.material-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.material-subtitle {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+}
+
+.material-link {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* CTA Section */
+.cta {
+    background: #2d4a9e;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.cta-description {
+    font-size: 18px;
+    color: #cbd5e1;
+    margin-bottom: 32px;
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-description {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-links li,
+.footer-contact li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact {
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    background: #1e293b;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.social-link:hover {
+    background: #334155;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+}
