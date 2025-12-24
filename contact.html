@@ -71,43 +71,39 @@
                         <h2 class="form-heading">Send us a Message</h2>
                         <p class="form-subheading">Fill out the form below and we'll get back to you shortly.</p>
 
-                        <form class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label class="form-label">Full Name</label>
-                                    <input type="text" class="form-input" placeholder="John Doe">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Email Address</label>
-                                    <input type="email" class="form-input" placeholder="john@company.com">
-                                </div>
-                            </div>
+                       <form class="contact-form" action="https://formspree.io/f/xykgarqo" method="POST">
+    <!-- Hidden honeypot field to catch bots -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" placeholder="John Doe" name="name" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="john@company.com" name="email" required>
+        </div>
+    </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Subject</label>
-                                <select class="form-input">
-                                    <option>Select a topic</option>
-                                    <option>Material Inquiry</option>
-                                    <option>Quote Request</option>
-                                    <option>Partnership Opportunity</option>
-                                    <option>General Question</option>
-                                </select>
-                            </div>
+    <div class="form-group">
+        <label class="form-label">Subject</label>
+        <select class="form-input" name="subject" required>
+            <option value="">Select a topic</option>
+            <option value="material-inquiry">Material Inquiry</option>
+            <option value="quote-request">Quote Request</option>
+            <option value="partnership">Partnership Opportunity</option>
+            <option value="general">General Question</option>
+        </select>
+    </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Message</label>
-                                <textarea class="form-textarea" rows="5" placeholder="Tell us about your requirements..."></textarea>
-                            </div>
+    <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" rows="5" placeholder="Tell us about your requirements..." name="message" required></textarea>
+    </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Human Verification: What is 1 + 5?</label>
-                                <input type="text" class="form-input" placeholder="Enter the sum">
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block">
-                                ✉️ Send Message
-                            </button>
-                        </form>
+    <input type="submit" class="btn btn-primary btn-block" value="✉️ Send Message">
+</form>
                     </div>
                 </div>
             </div>
