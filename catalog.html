@@ -173,5 +173,61 @@
             </div>
         </div>
     </footer>
+    <!-- ADD THE SCRIPT HERE -->
+    <script>
+        // Search and Filter functionality
+        const searchInput = document.querySelector('.search-input');
+        const filterSelect = document.querySelector('.filter-select');
+        const productCards = document.querySelectorAll('.product-card');
+
+        // Filter function
+        function filterProducts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = filterSelect.value;
+
+            productCards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const description = card.querySelector('.product-description').textContent.toLowerCase();
+                const origin = card.querySelector('.product-origin').textContent.toLowerCase();
+                const badge = card.querySelector('.product-badge').textContent;
+
+                // Check search term
+                const matchesSearch = title.includes(searchTerm) || 
+                                     description.includes(searchTerm) || 
+                                     origin.includes(searchTerm);
+
+                // Check category filter
+                const matchesCategory = selectedCategory === 'All Categories' || 
+                                       selectedCategory === '' || 
+                                       badge === selectedCategory.toUpperCase();
+
+                // Show/hide based on both filters
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Handle "no results" message
+            const visibleCards = Array.from(productCards).filter(card => card.style.display !== 'none');
+            const existingMessage = document.querySelector('.no-results-message');
+            
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            if (visibleCards.length === 0) {
+                const productGrid = document.querySelector('.product-grid');
+                const noResultsMessage = document.createElement('div');
+                noResultsMessage.className = 'no-results-message';
+                noResultsMessage.textContent = 'No products found';
+                productGrid.appendChild(noResultsMessage);
+            }
+        }
+        // Add event listeners
+        searchInput.addEventListener('input', filterProducts);
+        filterSelect.addEventListener('change', filterProducts);
+    </script>
 </body>
 </html>
