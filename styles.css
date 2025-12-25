@@ -785,3 +785,11 @@ ul {
         gap: 20px;
     }
 }
+/* Search - No Results Message */
+.no-results-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #64748b;
+    font-size: 18px;
+}
